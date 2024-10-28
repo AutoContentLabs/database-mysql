@@ -1,0 +1,14 @@
+-- File: service_metrics.sql
+-- Purpose: Insert initial data into the service_metrics table
+-- Author: [Your Name]
+-- Date: 2024-10-26
+-- Version: 1.0
+-- ===============================================
+-- Script to Insert Initial Data into Service Metrics Table
+-- ===============================================
+-- Insert initial data into the service_metrics table
+-- ===============================================
+-- Note:
+-- Ensure the 'service_metrics' table exists in your database
+-- before executing this script.
+-- ===============================================
