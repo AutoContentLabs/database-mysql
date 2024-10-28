@@ -62,7 +62,7 @@ INSERT INTO
         data_category_name,
         data_category_description,
         schema_type_id,
-        data_target_database,
+        recommended_database,
         data_category_schema,
         data_category_reference
     )
