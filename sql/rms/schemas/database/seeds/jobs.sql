@@ -1,0 +1,13 @@
+-- File: jobs.sql
+-- Purpose: Add example data into the jobs table
+-- ==========================================================================================================
+
+-- Inserting values into the jobs table
+INSERT INTO jobs (job_name, job_description, job_status) VALUES
+('Data Collection Job', 'Job to collect data from various sources.', 'pending'),
+('Data Processing Job', 'Job to process the collected data and generate insights.', 'running'),
+('Report Generation Job', 'Job to generate weekly reports based on processed data.', 'pending'),
+('Data Cleanup Job', 'Job to clean up old and unused data entries.', 'failed'),
+('Analytics Job', 'Job to perform analytics on the data for trend detection.', 'completed'),
+('Backup Job', 'Job to create backups of all data every night.', 'pending'),
+('Notification Job', 'Job to send notifications after data processing is completed.', 'running');

@@ -1,15 +1,13 @@
 -- File: data_categories.sql
--- Purpose: Creating data_categories table for defining various data categories linked to schema types
-CREATE TABLE
-    data_categories (
-        data_category_id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'Unique identifier for data categories',
-        data_category_name VARCHAR(50) NOT NULL UNIQUE COMMENT 'Name of data category',
-        data_category_description TEXT NULL DEFAULT NULL COMMENT 'Detailed description of the category',
-        schema_type_id INT COMMENT 'Foreign key referencing schema_types table',
-        recommended_database VARCHAR(50) COMMENT 'The database type in which the category should be stored',
-        data_category_schema JSON COMMENT 'Defines the schema for the category based on selected schema type',
-        data_category_reference JSON COMMENT 'Provides practical reference examples for the data category',
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Record creation timestamp',
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record update timestamp'
-        -- FOREIGN KEY (schema_type_id) REFERENCES schema_types (schema_type_id)
-    );
+-- Purpose: To define standardized data schemas for collecting various types of data from different sources
+-- ===========================================================
+
+CREATE TABLE data_categories (
+    data_category_id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'Unique identifier for each data category schema',
+    data_category_name VARCHAR(50) NOT NULL UNIQUE COMMENT 'Standardized name of the data category schema',
+    data_category_description TEXT DEFAULT NULL COMMENT 'Detailed description of the data category',
+    data_category_schema JSON NOT NULL COMMENT 'Raw structure of the schema used for data collection',
+    data_category_reference JSON DEFAULT NULL COMMENT 'Reference usage for the schema',
+    data_category_recommended_databases VARCHAR(100) DEFAULT NULL COMMENT 'Recommended compatible databases for the data category (e.g., Elasticsearch, InfluxDB, MySQL, PostgreSQL, MongoDB)'
+    -- CHECK (data_category_id BETWEEN 1 AND 9)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Table to store predefined data schemas for standard data collection';

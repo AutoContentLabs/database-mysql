@@ -1,12 +1,7 @@
 -- File: tags.sql
 -- Purpose: Insert initial data into the tags table
--- Author: [Your Name]
--- Date: 2024-10-26
--- Version: 1.0
--- ===============================================
--- Script to Insert Initial Data into Tags Table
--- ===============================================
--- Insert initial data into the tags table
+-- =========================================================================================================================
+
 -- "The Universe and Natural World"
 INSERT INTO
     tags (tag_name, tag_description)
@@ -55,6 +50,7 @@ VALUES
         'meteorology',
         'The science dealing with the atmosphere and its phenomena, including weather and climate.'
     ),
+    ('weather', 'Tags related to meteorological data and forecasts.'),
     (
         'ecology',
         'The study of interactions among organisms and their environment.'
@@ -119,7 +115,10 @@ VALUES
     (
         'gender_studies',
         'An academic field that explores the role of gender in society and its impact on individuals.'
-    );
+    ),
+    ('trends', 'Tags related to current trends across various domains.'),
+    ('finance', 'Tags related to financial data and market trends.'),
+    ('social media', 'Tags related to data collected from social media platforms.');
 
 -- "Technology and Innovation"
 INSERT INTO
@@ -460,9 +459,3 @@ VALUES
         'distributed_systems',
         'Systems that consist of multiple components located on different networked computers.'
     );
-
--- ===============================================
--- Note:
--- Ensure the 'tags' table exists in your database
--- before executing this script.
--- ===============================================
