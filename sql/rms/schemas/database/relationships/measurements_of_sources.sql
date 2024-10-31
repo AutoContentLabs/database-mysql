@@ -10,4 +10,4 @@ CREATE TABLE measurements_of_sources (
     metric_type ENUM('accuracy', 'latency', 'availability', 'other') NOT NULL COMMENT 'Type of the metric being recorded',
     UNIQUE KEY idx_unique_source_time (source_id, measurement_time), -- 'Ensures each source has a unique measurement time entry',
     FOREIGN KEY (source_id) REFERENCES sources(source_id) ON DELETE CASCADE ON UPDATE CASCADE -- 'Establishes a relationship with the sources table, cascading updates and deletes'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Table to store various metrics related to data sources';
+);

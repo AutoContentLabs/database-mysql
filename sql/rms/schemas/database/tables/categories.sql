@@ -9,4 +9,4 @@ CREATE TABLE categories (
     category_name VARCHAR(100) NOT NULL COMMENT 'Full name of the category',
     category_description TEXT DEFAULT NULL COMMENT 'Detailed description defining the category',
     FOREIGN KEY (parent_id) REFERENCES categories(category_id) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Table to store categories and subcategories for data analysis';
+);

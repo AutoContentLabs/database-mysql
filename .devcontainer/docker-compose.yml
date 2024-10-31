@@ -22,6 +22,7 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
       - ../sql/rms/schemas/database:/docker-entrypoint-initdb.d
+      - ../sql/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
     networks:
       - shared_network
     healthcheck:

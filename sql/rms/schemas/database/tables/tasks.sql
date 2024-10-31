@@ -12,5 +12,5 @@ CREATE TABLE tasks (
     retry_count INT DEFAULT 0 COMMENT 'Number of retry attempts for failed tasks',
     error_message TEXT NULL COMMENT 'Error message generated if the task fails',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Timestamp for when the task was created'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Table to store tasks associated with jobs for data management purposes';
+);
 

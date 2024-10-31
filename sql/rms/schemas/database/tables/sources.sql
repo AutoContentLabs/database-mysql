@@ -6,5 +6,5 @@ CREATE TABLE sources (
     source_id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'Unique identifier for each source',
     source_name VARCHAR(255) NOT NULL COMMENT 'General name of the source (e.g., Trend sources, Weather sources)',
     source_description TEXT NULL DEFAULT NULL COMMENT 'A description that best describes the source'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Table to store information about data sources used in the collection process';
+);
 

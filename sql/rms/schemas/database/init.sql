@@ -46,6 +46,8 @@ COMMIT;
 -- Seeds.Table: This step is to load initial data for the previously created tables.
 -- When the tables in the Tables section are ready and compliant with foreign key references,
 -- you can safely load the initial data.
+SOURCE /docker-entrypoint-initdb.d/seeds/categories.sql;
+SOURCE /docker-entrypoint-initdb.d/seeds/data_categories.sql;
 SOURCE /docker-entrypoint-initdb.d/seeds/data_collections.sql;
 SOURCE /docker-entrypoint-initdb.d/seeds/jobs.sql;
 SOURCE /docker-entrypoint-initdb.d/seeds/platforms.sql;

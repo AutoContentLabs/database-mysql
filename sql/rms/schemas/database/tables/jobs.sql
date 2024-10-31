@@ -9,4 +9,4 @@ CREATE TABLE jobs (
     job_status ENUM ('pending', 'running', 'completed', 'failed') DEFAULT 'pending' COMMENT 'Current status of the job',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Timestamp for when the job was created',
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Timestamp for when the job was last updated'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Table to store information about jobs and their statuses';
+);

@@ -6,5 +6,5 @@ CREATE TABLE data_format_types (
     data_format_code INT AUTO_INCREMENT PRIMARY KEY COMMENT 'Unique identifier for each data format (e.g., 1: json, 2: xml, 3: csv, 4: html)',
     data_format_name VARCHAR(50) NOT NULL UNIQUE COMMENT 'Name of the data format (e.g., json, xml, csv, html)',
     data_format_description TEXT DEFAULT NULL COMMENT 'Detailed description of the data format'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Table storing various data format types used in the system';
+);
 

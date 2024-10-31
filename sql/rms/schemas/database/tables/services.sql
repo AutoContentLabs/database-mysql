@@ -23,5 +23,5 @@ CREATE TABLE services (
     fetch_frequency INT NOT NULL DEFAULT 0 COMMENT 'Frequency (in seconds) at which data will be fetched from the external source',
     last_fetched TIMESTAMP NULL COMMENT 'Timestamp for when the data was last fetched; updated during each fetch',
     next_fetch TIMESTAMP NULL COMMENT 'Timestamp for when the next fetch will occur; calculated automatically based on fetch frequency'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Table to store information about services provided by platforms';
+);
 

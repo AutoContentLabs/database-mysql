@@ -140,8 +140,8 @@ ALTER TABLE sources
 ADD CONSTRAINT fk_sources_data_categories FOREIGN KEY (data_category_id) REFERENCES data_categories (data_category_id);
 
 -- data_categories schema_types schema_type_code
-ALTER TABLE data_categories
-ADD COLUMN schema_type_code INT NOT NULL COMMENT '1: time_series, 2: historical, 3: aggregated, 4: categorical, 5: text';
+-- ALTER TABLE data_categories
+-- ADD COLUMN schema_type_code INT NOT NULL COMMENT 'TS:time_series,  HT:historical, RT: real_time, ...';
 
-ALTER TABLE data_categories
-ADD CONSTRAINT fk_data_categories_schema_types FOREIGN KEY (schema_type_code) REFERENCES schema_types (schema_type_code);
+-- ALTER TABLE data_categories
+-- ADD CONSTRAINT fk_data_categories_schema_types FOREIGN KEY (schema_type_code) REFERENCES schema_types (schema_type_code);
