@@ -33,7 +33,7 @@ services:
       dockerfile: Dockerfile.backup
     env_file: .env
     volumes:
-      - ./backups:/backups
+      - ../backup:/backup
       - mysql_data:/var/lib/mysql
     networks:
       - shared_network
