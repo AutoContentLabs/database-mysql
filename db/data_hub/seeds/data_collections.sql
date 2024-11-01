@@ -1,0 +1,16 @@
+-- File: data_collections.sql
+-- Purpose: Inserting values into the data_collection table
+-- =========================================================
+
+-- Inserting values into the data_collection table
+-- Example
+-- INSERT INTO data_collections (data_information) VALUES
+-- (JSON_OBJECT('type', 'Real-Time Data', 'timestamp', '2024-01-01T00:00:00Z', 'value', 123)),
+-- (JSON_OBJECT('type', 'Historical Data', 'date', '2024-01-01', 'value', 456)),
+-- (JSON_OBJECT('type', 'Aggregated Data', 'aggregate_type', 'sum', 'total', 789)),
+-- (JSON_OBJECT('type', 'Categorical Data', 'category', 'A', 'count', 100)),
+-- (JSON_OBJECT('type', 'Text Data', 'text', 'Sample text data.')),
+-- (JSON_OBJECT('type', 'Time Series Data', 'time', '2024-01-01T00:00:00Z', 'value', 123)),
+-- (JSON_OBJECT('type', 'Geospatial Data', 'location', JSON_OBJECT('latitude', 40.7128, 'longitude', -74.0060))),
+-- (JSON_OBJECT('type', 'User Data', 'user_id', 'user123', 'preferences', JSON_OBJECT('theme', 'dark'))),
+-- (JSON_OBJECT('type', 'Sensor Data', 'sensor_id', 'sensor1', 'measurement', 25.5));

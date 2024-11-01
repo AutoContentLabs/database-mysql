@@ -2,27 +2,24 @@ services:
 
   app:
     build:
-      context: .
-      dockerfile: Dockerfile
-
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
     volumes:
       - /var/run/docker.sock:/var/run/docker-host.sock
       - ../..:/workspaces:cached
     networks:
       - shared_network
-
-    entrypoint: /usr/local/share/docker-init.sh
-    command: sleep infinity
+    entrypoint: [ "/bin/sh", "-c", "/scripts/migrate.sh && sleep infinity" ]
+    depends_on:
+      - mysql
 
   mysql:
     image: mysql:latest
     env_file: .env
     ports:
-      - "3306:3306"
+      - "${MYSQL_DB_HOST_PORT}:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-      - ../sql/rms/schemas/database:/docker-entrypoint-initdb.d
-      - ../sql/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
     networks:
       - shared_network
     healthcheck:

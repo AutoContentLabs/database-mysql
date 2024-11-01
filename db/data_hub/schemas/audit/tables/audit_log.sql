@@ -1,0 +1,3 @@
+-- File: audit_log.sql
+-- Purpose: Define indexes to optimize query performance in the database
+-- ===============================================================

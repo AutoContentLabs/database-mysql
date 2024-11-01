@@ -1,0 +1,2 @@
+-- File: triggers.sql
+-- Purpose: Defines triggers for the services table to automatically manage timestamps

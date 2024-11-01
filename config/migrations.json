@@ -1,0 +1,27 @@
+{
+  "database": "data_hub",
+  "migrations_directory": "db/data_hub/migrations/versions",
+  "migration_table": "migration_history",
+  "migration_file_format": "sql",
+  "versioning": {
+    "enabled": true,
+    "current_version": "",
+    "applied_versions": []
+  },
+  "rollback": {
+    "enabled": true,
+    "rollback_directory": "db/data_hub/migrations/rollback"
+  },
+  "error_handling": {
+    "log_errors": true,
+    "error_log_file": "logs/migration.error.log"
+  },
+  "backup": {
+    "enabled": true,
+    "backup_directory": "backup"
+  },
+  "migration_details": {
+    "description": true,
+    "applied_by": true
+  }
+}
