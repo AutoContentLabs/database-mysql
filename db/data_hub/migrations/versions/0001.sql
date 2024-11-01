@@ -132,7 +132,7 @@ SOURCE db/data_hub/schemas/core/views/measurements_of_sources_report.sql;
 COMMIT;
 
 -- AUDIT --
-db/data_hub/schemas/audit/tables/audit_log.sql
-db/data_hub/schemas/audit/indexes/audit_indexes.sql
-db/data_hub/schemas/audit/triggers/audit_triggers.sql
-db/data_hub/schemas/audit/views/audit_views.sql
+SOURCE db/data_hub/schemas/audit/tables/audit_log.sql;
+SOURCE db/data_hub/schemas/audit/indexes/audit_indexes.sql;
+SOURCE db/data_hub/schemas/audit/triggers/audit_triggers.sql;
+SOURCE db/data_hub/schemas/audit/views/audit_views.sql;
