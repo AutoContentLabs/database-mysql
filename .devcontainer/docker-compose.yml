@@ -1,5 +1,4 @@
 services:
-
   app:
     build:
       context: ..
@@ -27,6 +26,20 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  backup:
+    build:
+      context: ..
+      dockerfile: Dockerfile.backup
+    env_file: .env
+    volumes:
+      - ./backups:/backups
+      - mysql_data:/var/lib/mysql
+    networks:
+      - shared_network
+    entrypoint: [ "/bin/sh", "-c", "while :; do /scripts/backup.sh; sleep 86400; done" ]
+    depends_on:
+      - mysql
 
 volumes:
   mysql_data:

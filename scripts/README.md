@@ -8,6 +8,7 @@ This directory contains various scripts used for database operations. Below is a
 - [General Information](#general-information)
 - [Script Files](#script-files)
   - [backup.sh](#backupsh)
+  - [restore.sh](#restoresh)
   - [migrate.sh](#migratesh)
   - [rollback.sh](#rollbacksh)
 - [Requirements](#requirements)
@@ -29,6 +30,22 @@ This script enables database backup. When backup is enabled (`backup.enabled` is
 scripts/backup.sh
 ```
 
+### restore.sh
+
+This script restores the database from a specified SQL backup file. It takes a single argument for the backup file path and restores it to the database specified in the configuration.
+
+#### Usage
+
+```bash
+scripts/restore.sh <backup_file.sql>
+```
+
+Replace `<backup_file.sql>` with the path to the backup file you want to restore. For example:
+
+```bash
+scripts/restore.sh /path/to/backup_file.sql
+```
+
 ### migrate.sh
 
 This script is used to apply migration files in sequence. New migration files are detected in the `migrations_directory` and applied in order. When a migration is successfully applied, the `current_version` in `migrations.json` is updated.
@@ -48,6 +65,7 @@ This script performs a rollback operation for a specified migration version. Rol
 ```bash
 scripts/rollback.sh <version>
 ```
+
 Replace `<version>` with the migration version you want to roll back. For example:
 
 ```bash
@@ -66,10 +84,10 @@ scripts/rollback.sh 001
 
 2. Add necessary configuration files (`my.cnf` and `migrations.json`) to the `config` directory.
 
-3. Grant execution permissions to `backup.sh`, `migrate.sh`, and `rollback.sh`:
+3. Grant execution permissions to `backup.sh`, `restore.sh`, `migrate.sh`, and `rollback.sh`:
 
 ```bash
-chmod +x scripts/backup.sh scripts/migrate.sh scripts/rollback.sh
+chmod +x scripts/backup.sh scripts/restore.sh scripts/migrate.sh scripts/rollback.sh
 ```
 
 Run each script individually according to your needs.
