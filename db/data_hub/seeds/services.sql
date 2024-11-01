@@ -9,3 +9,33 @@
 --     ('api.open-meteo.com', '/weather', 'latitude=35.6895&longitude=139.6917', 0, 600), -- Weather data for Tokyo
 --     ('api.twitter.com', '/statuses/user_timeline', 'screen_name=twitterapi&count=10', 0, 120), -- Fetch user timeline every 2 minutes
 --     ('api.youtube.com', '/videos', 'part=snippet&chart=mostPopular', 0, 3600); -- Fetch popular videos every hour
+
+
+-- Example
+-- Purpose: Insert initial data into the services table
+-- INSERT INTO
+--     services (
+--         service_domain,
+--         service_path,
+--         service_query
+--     )
+-- VALUES (
+--         'trends.google.com',
+--         '/trending/rss',
+--         '?geo=US'
+--     ),
+--     (
+--         'trends.google.com',
+--         '/trending/rss',
+--         '?geo=TR'
+--     ),
+--     (
+--         'api.open-meteo.com',
+--         '/v1/forecast',
+--         '?latitude=37.7749&longitude=-122.4194&hourly=temperature_2m'
+--     ),
+--     (
+--         'api.open-meteo.com',
+--         '/v1/forecast',
+--         '?latitude=38.9637&longitude=35.2433&hourly=temperature_2m'
+--     );

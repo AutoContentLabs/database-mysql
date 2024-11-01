@@ -133,6 +133,7 @@ COMMIT;
 
 -- AUDIT --
 SOURCE db/data_hub/schemas/audit/tables/audit_log.sql;
+SOURCE db/data_hub/schemas/audit/tables/task_history.sql;
 SOURCE db/data_hub/schemas/audit/indexes/audit_indexes.sql;
 SOURCE db/data_hub/schemas/audit/triggers/audit_triggers.sql;
 SOURCE db/data_hub/schemas/audit/views/audit_views.sql;
